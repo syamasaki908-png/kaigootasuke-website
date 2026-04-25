@@ -8,8 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -17,23 +16,12 @@
   <header class="header" id="top">
     <div class="container header-inner">
       <a href="#top" class="logo">
-        <div class="logo-icon">
-          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="20" cy="20" r="20" fill="url(#logoGrad)"/>
-            <path d="M12 26c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
-            <circle cx="20" cy="14" r="4" fill="#fff"/>
-            <defs>
-              <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#2563eb"/>
-                <stop offset="1" stop-color="#0ea5e9"/>
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
-        <div class="logo-text">
-          <span class="logo-main">トータルサポート誠</span>
-          <span class="logo-sub">暮らしの困りごと解決</span>
-        </div>
+        <svg class="logo-mark" viewBox="0 0 36 36" fill="none">
+          <rect width="36" height="36" rx="10" fill="#0f766e"/>
+          <circle cx="18" cy="13" r="5" fill="white"/>
+          <path d="M8 30c0-5.5 4.5-10 10-10s10 4.5 10 10" stroke="white" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        </svg>
+        <span class="logo-name">トータルサポート誠</span>
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="メニュー">
         <span></span><span></span><span></span>
@@ -43,9 +31,7 @@
           <li><a href="#services">サービス</a></li>
           <li><a href="#about">私たちについて</a></li>
           <li><a href="#price">料金</a></li>
-          <li><a href="#contact" class="nav-cta">
-            <i data-lucide="mail" style="width:15px;height:15px;vertical-align:-2px;margin-right:4px;"></i>無料相談
-          </a></li>
+          <li><a href="#contact" class="nav-btn">無料相談する →</a></li>
         </ul>
       </nav>
     </div>
@@ -53,143 +39,136 @@
 
   <!-- ヒーロー -->
   <section class="hero">
-    <div class="hero-bg">
-      <div class="hero-orb orb1"></div>
-      <div class="hero-orb orb2"></div>
-      <div class="hero-orb orb3"></div>
-      <svg class="hero-wave" viewBox="0 0 1440 120" preserveAspectRatio="none">
-        <path d="M0,60 C360,120 1080,0 1440,60 L1440,120 L0,120 Z" fill="white" opacity="0.06"/>
-      </svg>
-    </div>
     <div class="container hero-inner">
-      <div class="hero-content">
-        <div class="hero-badge">
-          <i data-lucide="shield-check" style="width:14px;height:14px;"></i>
-          社会福祉士・介護福祉士が対応
-        </div>
+      <div class="hero-text">
+        <p class="hero-label">社会福祉士・介護福祉士が対応</p>
         <h1 class="hero-title">
-          あなたと家族の<br>
-          <span class="hero-accent">「困った」</span>を、<br>
-          一緒に解決します。
+          「どうしたらいいか<br>
+          わからない」<br>
+          <em>その一言から、</em><br>
+          始めましょう。
         </h1>
-        <p class="hero-desc">
-          老人ホーム探しから介護相談・家財整理・生活支援まで。<br>
-          現場経験豊富な専門家が、あなたに寄り添います。
-        </p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-hero-primary">
-            <i data-lucide="message-circle" style="width:18px;height:18px;"></i>
-            無料相談はこちら
-          </a>
-          <a href="#services" class="btn btn-hero-secondary">
-            サービスを見る
-            <i data-lucide="chevron-down" style="width:16px;height:16px;"></i>
-          </a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-num">無料</span>
-            <span class="stat-label">老人ホーム紹介</span>
-          </div>
-          <div class="stat-div"></div>
-          <div class="stat">
-            <span class="stat-num">3資格</span>
-            <span class="stat-label">専門資格保有</span>
-          </div>
-          <div class="stat-div"></div>
-          <div class="stat">
-            <span class="stat-num">24h</span>
-            <span class="stat-label">以内にご返信</span>
-          </div>
+        <p class="hero-desc">老人ホーム探し・介護相談・家財整理・生活困窮まで。<br>専門家がまるごとサポートします。</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-main">まずは無料で相談する <span class="arrow">→</span></a>
+          <a href="#services" class="btn-sub">サービスを見る</a>
         </div>
       </div>
-      <div class="hero-visual">
-        <!-- SVGイラスト：ケアのシーン -->
-        <svg viewBox="0 0 420 380" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero-illustration">
-          <!-- 背景円 -->
-          <circle cx="210" cy="190" r="160" fill="rgba(255,255,255,0.07)"/>
-          <circle cx="210" cy="190" r="120" fill="rgba(255,255,255,0.05)"/>
-          <!-- 建物・施設アイコン -->
-          <rect x="90" y="200" width="80" height="90" rx="8" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
-          <rect x="110" y="218" width="16" height="20" rx="3" fill="rgba(255,255,255,0.4)"/>
-          <rect x="136" y="218" width="16" height="20" rx="3" fill="rgba(255,255,255,0.4)"/>
-          <rect x="120" y="252" width="20" height="38" rx="3" fill="rgba(255,255,255,0.4)"/>
-          <polygon points="80,202 130,168 180,202" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-linejoin="round"/>
-          <!-- 人物 1（立っているスタッフ）-->
-          <circle cx="270" cy="168" r="22" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
-          <rect x="252" y="196" width="36" height="52" rx="12" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
-          <!-- 人物 2（座っているお年寄り）-->
-          <circle cx="330" cy="228" r="18" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
-          <rect x="314" y="252" width="32" height="36" rx="8" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+      <div class="hero-illust">
+        <!-- メインSVGイラスト -->
+        <svg viewBox="0 0 480 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- 背景のやさしい円 -->
+          <circle cx="240" cy="220" r="190" fill="#f0fdf9"/>
+          <circle cx="240" cy="220" r="140" fill="#ccfbef"/>
+
+          <!-- 建物（老人ホームイメージ）-->
+          <rect x="100" y="220" width="130" height="130" rx="10" fill="white" stroke="#99f6e4" stroke-width="2"/>
+          <rect x="118" y="240" width="22" height="28" rx="4" fill="#ccfbef"/>
+          <rect x="152" y="240" width="22" height="28" rx="4" fill="#ccfbef"/>
+          <rect x="186" y="240" width="22" height="28" rx="4" fill="#ccfbef"/>
+          <rect x="138" y="282" width="24" height="68" rx="4" fill="#5eead4"/>
+          <polygon points="85,222 165,168 245,222" fill="#0d9488" opacity="0.15"/>
+          <polygon points="85,222 165,168 245,222" fill="none" stroke="#0d9488" stroke-width="2.5" stroke-linejoin="round"/>
+          <!-- 煙突の煙 -->
+          <circle cx="158" cy="152" r="8" fill="white" opacity="0.7"/>
+          <circle cx="166" cy="140" r="6" fill="white" opacity="0.5"/>
+          <circle cx="160" cy="128" r="5" fill="white" opacity="0.3"/>
+
+          <!-- スタッフの人物 -->
+          <!-- 頭 -->
+          <circle cx="320" cy="178" r="26" fill="#fcd9bd"/>
+          <!-- 髪 -->
+          <path d="M296,168 Q296,148 320,148 Q344,148 344,168" fill="#6b4226"/>
+          <!-- 体（制服） -->
+          <rect x="298" y="204" width="44" height="60" rx="12" fill="#0d9488"/>
+          <!-- 腕 -->
+          <rect x="282" y="210" width="18" height="36" rx="9" fill="#0d9488"/>
+          <rect x="340" y="210" width="18" height="36" rx="9" fill="#0d9488"/>
+          <!-- 手 -->
+          <circle cx="291" cy="248" r="7" fill="#fcd9bd"/>
+          <circle cx="349" cy="248" r="7" fill="#fcd9bd"/>
+          <!-- 書類を持つ -->
+          <rect x="300" y="230" width="40" height="30" rx="4" fill="white" opacity="0.9"/>
+          <line x1="307" y1="238" x2="333" y2="238" stroke="#0d9488" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="307" y1="244" x2="328" y2="244" stroke="#0d9488" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="307" y1="250" x2="325" y2="250" stroke="#0d9488" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- 脚 -->
+          <rect x="305" y="264" width="14" height="50" rx="7" fill="#374151"/>
+          <rect x="325" y="264" width="14" height="50" rx="7" fill="#374151"/>
+          <!-- 靴 -->
+          <ellipse cx="312" cy="316" rx="11" ry="6" fill="#1f2937"/>
+          <ellipse cx="332" cy="316" rx="11" ry="6" fill="#1f2937"/>
+
+          <!-- お年寄りの人物 -->
+          <!-- 頭 -->
+          <circle cx="380" cy="252" r="20" fill="#fcd9bd"/>
+          <!-- 白髪 -->
+          <path d="M362,248 Q360,228 380,226 Q400,228 398,248" fill="#e5e7eb"/>
+          <!-- 体 -->
+          <rect x="364" y="272" width="32" height="44" rx="8" fill="#ddd6fe"/>
           <!-- 杖 -->
-          <line x1="344" y1="260" x2="356" y2="290" stroke="rgba(255,255,255,0.4)" stroke-width="2" stroke-linecap="round"/>
-          <!-- ハート -->
-          <path d="M262 232 C262 228 256 224 252 228 C248 224 242 228 242 232 C242 240 252 248 252 248 C252 248 262 240 262 232Z" fill="rgba(255,182,193,0.7)"/>
-          <!-- チェックマーク・バッジ -->
-          <circle cx="150" cy="160" r="24" fill="rgba(16,185,129,0.3)" stroke="rgba(16,185,129,0.6)" stroke-width="1.5"/>
-          <path d="M140 160 L148 168 L162 152" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <!-- 吹き出し -->
-          <rect x="290" y="148" width="80" height="36" rx="10" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-          <polygon points="310,184 322,184 316,194" fill="rgba(255,255,255,0.18)"/>
-          <line x1="302" y1="162" x2="358" y2="162" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
-          <line x1="302" y1="172" x2="344" y2="172" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-linecap="round"/>
-          <!-- 家アイコン（右下）-->
-          <rect x="170" y="270" width="70" height="60" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
-          <polygon points="160,272 205,244 250,272" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
-          <rect x="192" y="294" width="18" height="36" rx="3" fill="rgba(255,255,255,0.3)"/>
+          <line x1="396" y1="280" x2="412" y2="330" stroke="#92400e" stroke-width="3" stroke-linecap="round"/>
+          <line x1="406" y1="328" x2="418" y2="328" stroke="#92400e" stroke-width="3" stroke-linecap="round"/>
+          <!-- 脚 -->
+          <rect x="370" y="316" width="10" height="36" rx="5" fill="#6b7280"/>
+          <rect x="382" y="316" width="10" height="36" rx="5" fill="#6b7280"/>
+          <ellipse cx="375" cy="354" rx="9" ry="5" fill="#374151"/>
+          <ellipse cx="387" cy="354" rx="9" ry="5" fill="#374151"/>
+
+          <!-- 吹き出し（スタッフ） -->
+          <rect x="170" y="150" width="130" height="52" rx="14" fill="white" stroke="#5eead4" stroke-width="1.5" filter="url(#bs)"/>
+          <polygon points="218,202 230,202 224,214" fill="white" stroke="#5eead4" stroke-width="1.5" stroke-linejoin="round"/>
+          <text x="186" y="172" font-family="'Noto Sans JP',sans-serif" font-size="11" fill="#0f766e" font-weight="700">何でも相談してください</text>
+          <text x="196" y="190" font-family="'Noto Sans JP',sans-serif" font-size="10" fill="#6b7280">費用は一切かかりません</text>
+
+          <!-- 吹き出し（お年寄り） -->
+          <rect x="270" y="176" width="100" height="44" rx="12" fill="white" stroke="#e9d5ff" stroke-width="1.5" filter="url(#bs)"/>
+          <polygon points="282,220 294,220 288,230" fill="white" stroke="#e9d5ff" stroke-width="1.5" stroke-linejoin="round"/>
+          <text x="283" y="196" font-family="'Noto Sans JP',sans-serif" font-size="10" fill="#7c3aed" font-weight="700">施設を探したい</text>
+          <text x="280" y="212" font-family="'Noto Sans JP',sans-serif" font-size="10" fill="#6b7280">でも何から始めれば…</text>
+
+          <!-- ハートアイコン -->
+          <path d="M234 290 C234 285 228 280 224 284 C220 280 214 285 214 290 C214 298 224 306 224 306 C224 306 234 298 234 290Z" fill="#f87171" opacity="0.8"/>
+
+          <!-- チェックバッジ -->
+          <circle cx="140" cy="190" r="18" fill="#0d9488"/>
+          <path d="M131 190 L138 197 L150 182" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
           <!-- 装飾ドット -->
-          <circle cx="100" cy="140" r="5" fill="rgba(255,255,255,0.3)"/>
-          <circle cx="370" cy="160" r="4" fill="rgba(255,255,255,0.25)"/>
-          <circle cx="120" cy="320" r="6" fill="rgba(255,255,255,0.2)"/>
-          <circle cx="380" cy="310" r="5" fill="rgba(255,255,255,0.2)"/>
-          <circle cx="60" cy="250" r="4" fill="rgba(255,255,255,0.15)"/>
+          <circle cx="76" cy="280" r="7" fill="#5eead4" opacity="0.4"/>
+          <circle cx="460" cy="200" r="6" fill="#a78bfa" opacity="0.4"/>
+          <circle cx="440" cy="360" r="9" fill="#fbbf24" opacity="0.3"/>
+          <circle cx="70" cy="360" r="5" fill="#0d9488" opacity="0.3"/>
+
+          <defs>
+            <filter id="bs" x="-10%" y="-10%" width="120%" height="140%">
+              <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="rgba(0,0,0,0.07)"/>
+            </filter>
+          </defs>
         </svg>
       </div>
     </div>
-    <div class="hero-bottom-wave">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
-        <path d="M0,40 C480,80 960,0 1440,40 L1440,80 L0,80 Z" fill="#f8fafc"/>
-      </svg>
-    </div>
-  </section>
-
-  <!-- 強み バッジ -->
-  <section class="badges">
-    <div class="container badges-inner">
-      <div class="badge-item">
-        <div class="badge-icon-wrap" style="background:#eff6ff;">
-          <i data-lucide="home" style="color:#2563eb;"></i>
+    <!-- 実績ストリップ -->
+    <div class="hero-strip">
+      <div class="container strip-inner">
+        <div class="strip-item">
+          <span class="strip-num">3<small>つ</small></span>
+          <span class="strip-label">専門資格保有</span>
         </div>
-        <div>
-          <strong>老人ホーム紹介</strong>
-          <span>完全無料</span>
+        <div class="strip-div"></div>
+        <div class="strip-item">
+          <span class="strip-num">¥0</span>
+          <span class="strip-label">老人ホーム紹介は完全無料</span>
         </div>
-      </div>
-      <div class="badge-item">
-        <div class="badge-icon-wrap" style="background:#f0fdf4;">
-          <i data-lucide="car" style="color:#16a34a;"></i>
+        <div class="strip-div"></div>
+        <div class="strip-item">
+          <span class="strip-num">24<small>h</small></span>
+          <span class="strip-label">以内にご返信します</span>
         </div>
-        <div>
-          <strong>施設見学</strong>
-          <span>無料送迎</span>
-        </div>
-      </div>
-      <div class="badge-item">
-        <div class="badge-icon-wrap" style="background:#fef3c7;">
-          <i data-lucide="award" style="color:#d97706;"></i>
-        </div>
-        <div>
-          <strong>社会福祉士</strong>
-          <span>介護福祉士在籍</span>
-        </div>
-      </div>
-      <div class="badge-item">
-        <div class="badge-icon-wrap" style="background:#fdf4ff;">
-          <i data-lucide="network" style="color:#9333ea;"></i>
-        </div>
-        <div>
-          <strong>行政・地域包括</strong>
-          <span>連携済み</span>
+        <div class="strip-div"></div>
+        <div class="strip-item">
+          <span class="strip-num">4<small>つ</small></span>
+          <span class="strip-label">の専門サービス</span>
         </div>
       </div>
     </div>
@@ -198,245 +177,271 @@
   <!-- サービス -->
   <section class="services" id="services">
     <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow">SERVICES</span>
-        <h2 class="section-title">サービス一覧</h2>
-        <p class="section-lead">4つの専門サービスで、暮らしのあらゆる困りごとをサポートします。</p>
+      <div class="sec-head">
+        <p class="sec-eyebrow">SERVICES</p>
+        <h2 class="sec-title">私たちにできること</h2>
+        <p class="sec-sub">あなたと家族の「困った」を解決する4つのサービス</p>
       </div>
 
-      <div class="service-grid">
+      <div class="sv-grid">
 
-        <div class="service-card" style="--card-color:#2563eb;--card-bg:#eff6ff;">
-          <div class="service-card-header">
-            <div class="service-icon-wrap">
-              <!-- 老人ホームSVGイラスト -->
-              <svg viewBox="0 0 64 64" fill="none">
-                <rect x="8" y="28" width="48" height="32" rx="4" fill="rgba(37,99,235,0.12)"/>
-                <rect x="16" y="36" width="10" height="12" rx="2" fill="rgba(37,99,235,0.3)"/>
-                <rect x="38" y="36" width="10" height="12" rx="2" fill="rgba(37,99,235,0.3)"/>
-                <rect x="26" y="40" width="12" height="20" rx="2" fill="rgba(37,99,235,0.4)"/>
-                <polygon points="4,30 32,10 60,30" fill="rgba(37,99,235,0.2)"/>
-                <circle cx="46" cy="20" r="6" fill="rgba(37,99,235,0.15)" stroke="rgba(37,99,235,0.5)" stroke-width="1.5"/>
-                <path d="M43 20 L45 22 L50 17" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div class="service-card-badge">無料</div>
+        <a href="#contact" class="sv-card sv-blue">
+          <div class="sv-card-top">
+            <div class="sv-num">01</div>
+            <span class="sv-free">無料</span>
+          </div>
+          <div class="sv-illust">
+            <svg viewBox="0 0 200 160" fill="none">
+              <!-- 建物 -->
+              <rect x="40" y="70" width="120" height="80" rx="8" fill="#dbeafe"/>
+              <rect x="56" y="88" width="24" height="30" rx="4" fill="#93c5fd"/>
+              <rect x="92" y="88" width="24" height="30" rx="4" fill="#93c5fd"/>
+              <rect x="76" y="102" width="20" height="48" rx="3" fill="#3b82f6"/>
+              <polygon points="24,72 100,28 176,72" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2" stroke-linejoin="round"/>
+              <!-- 旗 -->
+              <line x1="100" y1="28" x2="100" y2="12" stroke="#3b82f6" stroke-width="1.5"/>
+              <polygon points="100,12 118,18 100,24" fill="#3b82f6"/>
+              <!-- チェック -->
+              <circle cx="156" cy="54" r="16" fill="#3b82f6"/>
+              <path d="M148,54 L154,60 L164,46" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- 装飾 -->
+              <circle cx="32" cy="120" r="5" fill="#bfdbfe"/>
+              <circle cx="172" cy="100" r="4" fill="#93c5fd"/>
+            </svg>
           </div>
           <h3>老人ホーム紹介</h3>
-          <p>ご本人・ご家族の希望に合わせた施設を無料でご紹介。見学への送迎も何度でも無料です。</p>
-          <ul class="service-list">
-            <li><i data-lucide="check" style="width:14px;height:14px;color:#2563eb;flex-shrink:0;"></i>介護付き有料老人ホーム</li>
-            <li><i data-lucide="check" style="width:14px;height:14px;color:#2563eb;flex-shrink:0;"></i>住宅型有料老人ホーム</li>
-            <li><i data-lucide="check" style="width:14px;height:14px;color:#2563eb;flex-shrink:0;"></i>サービス付き高齢者向け住宅</li>
-            <li><i data-lucide="check" style="width:14px;height:14px;color:#2563eb;flex-shrink:0;"></i>グループホーム</li>
+          <p>希望・予算・場所に合った施設をご提案。見学への無料送迎も何度でも対応します。</p>
+          <ul class="sv-tags">
+            <li>介護付き有料老人ホーム</li>
+            <li>サービス付き高齢者向け住宅</li>
+            <li>グループホーム</li>
           </ul>
-          <a href="#contact" class="service-link">相談する <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></a>
-        </div>
+          <span class="sv-link">詳しく見る →</span>
+        </a>
 
-        <div class="service-card" style="--card-color:#059669;--card-bg:#f0fdf4;">
-          <div class="service-card-header">
-            <div class="service-icon-wrap">
-              <svg viewBox="0 0 64 64" fill="none">
-                <circle cx="32" cy="22" r="10" fill="rgba(5,150,105,0.15)" stroke="rgba(5,150,105,0.4)" stroke-width="1.5"/>
-                <path d="M18 48c0-7.7 6.3-14 14-14s14 6.3 14 14" stroke="rgba(5,150,105,0.5)" stroke-width="2" stroke-linecap="round"/>
-                <path d="M42 28c2.2 1.8 4 4.6 4 8" stroke="rgba(5,150,105,0.3)" stroke-width="1.5" stroke-linecap="round"/>
-                <circle cx="46" cy="36" r="8" fill="rgba(5,150,105,0.12)" stroke="rgba(5,150,105,0.4)" stroke-width="1.5"/>
-                <path d="M43 36 L45 38 L50 33" stroke="#059669" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M26 34c-2.8 1-5 3.6-5 6.8" stroke="rgba(5,150,105,0.3)" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="service-card-badge" style="background:#dcfce7;color:#166534;">相談無料</div>
+        <a href="#contact" class="sv-card sv-green">
+          <div class="sv-card-top">
+            <div class="sv-num">02</div>
+            <span class="sv-free" style="background:#dcfce7;color:#166534;">相談無料</span>
+          </div>
+          <div class="sv-illust">
+            <svg viewBox="0 0 200 160" fill="none">
+              <!-- 人物2人 -->
+              <!-- 人物A -->
+              <circle cx="72" cy="56" r="22" fill="#d1fae5"/>
+              <rect x="54" y="78" width="36" height="48" rx="10" fill="#6ee7b7"/>
+              <!-- 人物B -->
+              <circle cx="136" cy="60" r="18" fill="#d1fae5"/>
+              <rect x="120" y="78" width="32" height="44" rx="8" fill="#34d399"/>
+              <!-- 会話線 -->
+              <path d="M94,64 Q112,52 118,64" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+              <!-- 吹き出し -->
+              <rect x="100" y="20" width="80" height="36" rx="10" fill="white" stroke="#6ee7b7" stroke-width="1.5"/>
+              <polygon points="118,56 130,56 124,66" fill="white" stroke="#6ee7b7" stroke-width="1.5" stroke-linejoin="round"/>
+              <rect x="110" y="31" width="60" height="6" rx="3" fill="#a7f3d0"/>
+              <rect x="110" y="42" width="44" height="6" rx="3" fill="#d1fae5"/>
+              <!-- ハート -->
+              <path d="M75 130 C75 126 70 122 67 125 C64 122 59 126 59 130 C59 136 67 142 67 142 C67 142 75 136 75 130Z" fill="#f87171" opacity="0.7"/>
+              <!-- 装飾 -->
+              <circle cx="28" cy="80" r="6" fill="#a7f3d0" opacity="0.6"/>
+              <circle cx="178" cy="128" r="5" fill="#6ee7b7" opacity="0.5"/>
+            </svg>
           </div>
           <h3>介護相談</h3>
-          <p>介護全般・福祉に関するご相談を幅広く承ります。ケアマネージャー紹介や病院付き添いも対応。</p>
-          <ul class="service-list">
-            <li><i data-lucide="check" style="width:14px;height:14px;color:#059669;flex-shrink:0;"></i>介護・福祉の総合相談</li>
-            <li><i data-lucide="check" style="width:14px;height:14px;color:#059669;flex-shrink:0;"></i>ケアマネージャー紹介</li>
-            <li><i data-lucide="check" style="width:14px;height:14px;color:#059669;flex-shrink:0;"></i>通院付き添い・医師への橋渡し</li>
+          <p>介護の悩み・手続き・ケアマネ選びまで。信頼できる専門家が親身に対応します。</p>
+          <ul class="sv-tags">
+            <li>介護・福祉の総合相談</li>
+            <li>ケアマネージャー紹介</li>
+            <li>病院付き添いサポート</li>
           </ul>
-          <a href="#contact" class="service-link" style="color:#059669;">相談する <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></a>
-        </div>
+          <span class="sv-link" style="color:#059669;">詳しく見る →</span>
+        </a>
 
-        <div class="service-card" style="--card-color:#d97706;--card-bg:#fffbeb;">
-          <div class="service-card-header">
-            <div class="service-icon-wrap">
-              <svg viewBox="0 0 64 64" fill="none">
-                <rect x="12" y="30" width="40" height="28" rx="4" fill="rgba(217,119,6,0.12)"/>
-                <rect x="20" y="38" width="10" height="10" rx="2" fill="rgba(217,119,6,0.3)"/>
-                <rect x="34" y="38" width="10" height="10" rx="2" fill="rgba(217,119,6,0.3)"/>
-                <rect x="10" y="28" width="44" height="6" rx="2" fill="rgba(217,119,6,0.2)" stroke="rgba(217,119,6,0.4)" stroke-width="1"/>
-                <path d="M22 28 L22 20 L42 20 L42 28" stroke="rgba(217,119,6,0.4)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <rect x="27" y="14" width="10" height="8" rx="2" fill="rgba(217,119,6,0.15)" stroke="rgba(217,119,6,0.35)" stroke-width="1.5"/>
-                <path d="M32 14 L32 8" stroke="rgba(217,119,6,0.4)" stroke-width="1.5" stroke-linecap="round"/>
-                <circle cx="46" cy="22" r="1.5" fill="rgba(217,119,6,0.5)"/>
-                <circle cx="50" cy="18" r="1.5" fill="rgba(217,119,6,0.4)"/>
-                <circle cx="42" cy="17" r="1.5" fill="rgba(217,119,6,0.3)"/>
-              </svg>
-            </div>
-            <div class="service-card-badge" style="background:#fef3c7;color:#92400e;">見積無料</div>
+        <a href="#contact" class="sv-card sv-amber">
+          <div class="sv-card-top">
+            <div class="sv-num">03</div>
+            <span class="sv-free" style="background:#fef3c7;color:#92400e;">見積無料</span>
+          </div>
+          <div class="sv-illust">
+            <svg viewBox="0 0 200 160" fill="none">
+              <!-- ダンボール箱積み重ね -->
+              <rect x="30" y="100" width="140" height="48" rx="6" fill="#fde68a"/>
+              <rect x="30" y="100" width="140" height="10" rx="4" fill="#f59e0b"/>
+              <line x1="100" y1="100" x2="100" y2="148" stroke="#f59e0b" stroke-width="1.5"/>
+              <rect x="54" y="68" width="100" height="40" rx="6" fill="#fcd34d"/>
+              <rect x="54" y="68" width="100" height="10" rx="4" fill="#f59e0b"/>
+              <line x1="104" y1="68" x2="104" y2="108" stroke="#f59e0b" stroke-width="1.5"/>
+              <rect x="74" y="38" width="68" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+              <line x1="108" y1="38" x2="108" y2="74" stroke="#f59e0b" stroke-width="1.5"/>
+              <!-- 矢印（整理中） -->
+              <circle cx="160" cy="52" r="16" fill="#f59e0b"/>
+              <path d="M152,52 L161,52 M157,47 L162,52 L157,57" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- ほうき -->
+              <line x1="38" y1="38" x2="54" y2="78" stroke="#92400e" stroke-width="2" stroke-linecap="round"/>
+              <path d="M38,78 Q54,78 68,70" stroke="#92400e" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+              <!-- 装飾 -->
+              <circle cx="176" cy="110" r="5" fill="#fde68a" opacity="0.7"/>
+            </svg>
           </div>
           <h3>家財整理</h3>
-          <p>施設入居・相続・ゴミ屋敷など、どんな状況でも福祉の視点で丁寧に対応。少量からのご依頼も歓迎。</p>
-          <ul class="service-list">
-            <li><i data-lucide="check" style="width:14px;height:14px;color:#d97706;flex-shrink:0;"></i>施設入居前の片付け</li>
-            <li><i data-lucide="check" style="width:14px;height:14px;color:#d97706;flex-shrink:0;"></i>相続に伴う実家整理</li>
-            <li><i data-lucide="check" style="width:14px;height:14px;color:#d97706;flex-shrink:0;"></i>ゴミ屋敷の片付け対応</li>
+          <p>施設入居・相続・ゴミ屋敷など、どんな状況でも福祉目線で丁寧に対応します。</p>
+          <ul class="sv-tags">
+            <li>施設入居前の片付け</li>
+            <li>相続・実家の整理</li>
+            <li>ゴミ屋敷対応</li>
           </ul>
-          <a href="#contact" class="service-link" style="color:#d97706;">相談する <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></a>
-        </div>
+          <span class="sv-link" style="color:#d97706;">詳しく見る →</span>
+        </a>
 
-        <div class="service-card" style="--card-color:#9333ea;--card-bg:#fdf4ff;">
-          <div class="service-card-header">
-            <div class="service-icon-wrap">
-              <svg viewBox="0 0 64 64" fill="none">
-                <circle cx="22" cy="24" r="8" fill="rgba(147,51,234,0.12)" stroke="rgba(147,51,234,0.35)" stroke-width="1.5"/>
-                <path d="M12 44c0-5.5 4.5-10 10-10s10 4.5 10 10" stroke="rgba(147,51,234,0.35)" stroke-width="1.5" stroke-linecap="round"/>
-                <circle cx="44" cy="22" r="7" fill="rgba(147,51,234,0.1)" stroke="rgba(147,51,234,0.3)" stroke-width="1.5"/>
-                <path d="M35 40c0-5 4-9 9-9s9 4 9 9" stroke="rgba(147,51,234,0.3)" stroke-width="1.5" stroke-linecap="round"/>
-                <!-- ネットワーク線 -->
-                <line x1="30" y1="34" x2="36" y2="36" stroke="rgba(147,51,234,0.4)" stroke-width="1.5" stroke-linecap="round"/>
-                <circle cx="32" cy="50" r="4" fill="rgba(147,51,234,0.2)" stroke="rgba(147,51,234,0.4)" stroke-width="1"/>
-                <path d="M29 50 L31 52 L36 47" stroke="#9333ea" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div class="service-card-badge" style="background:#f3e8ff;color:#6b21a8;">相談無料</div>
+        <a href="#contact" class="sv-card sv-purple">
+          <div class="sv-card-top">
+            <div class="sv-num">04</div>
+            <span class="sv-free" style="background:#ede9fe;color:#6d28d9;">相談無料</span>
+          </div>
+          <div class="sv-illust">
+            <svg viewBox="0 0 200 160" fill="none">
+              <!-- ネットワーク図 -->
+              <!-- 中央人物 -->
+              <circle cx="100" cy="80" r="24" fill="#ede9fe"/>
+              <circle cx="100" cy="72" r="9" fill="#a78bfa"/>
+              <path d="M84,96c0-8 7-12 16-12s16 4 16 12" fill="#c4b5fd"/>
+              <!-- 周辺アイコン -->
+              <!-- 市役所 -->
+              <circle cx="32" cy="40" r="16" fill="#ddd6fe"/>
+              <rect x="24" y="36" width="16" height="10" rx="2" fill="#7c3aed"/>
+              <polygon points="22,37 32,29 42,37" fill="#8b5cf6"/>
+              <!-- 病院 -->
+              <circle cx="168" cy="40" r="16" fill="#ddd6fe"/>
+              <rect x="163" y="34" width="10" height="12" rx="2" fill="#7c3aed"/>
+              <line x1="168" y1="36" x2="168" y2="44" stroke="white" stroke-width="2"/>
+              <line x1="164" y1="40" x2="172" y2="40" stroke="white" stroke-width="2"/>
+              <!-- ケアマネ -->
+              <circle cx="32" cy="132" r="16" fill="#ddd6fe"/>
+              <circle cx="32" cy="126" r="6" fill="#7c3aed"/>
+              <path d="M22,142c0-5.5 4.5-10 10-10s10 4.5 10 10" fill="#8b5cf6"/>
+              <!-- 福祉協議会 -->
+              <circle cx="168" cy="132" r="16" fill="#ddd6fe"/>
+              <path d="M162,132 C162,128 165,125 168,125 C171,125 174,128 174,132 C174,136 168,140 168,140 C168,140 162,136 162,132" fill="#7c3aed"/>
+              <!-- 接続線 -->
+              <line x1="48" y1="46" x2="80" y2="66" stroke="#c4b5fd" stroke-width="1.5" stroke-dasharray="4,3"/>
+              <line x1="152" y1="46" x2="120" y2="66" stroke="#c4b5fd" stroke-width="1.5" stroke-dasharray="4,3"/>
+              <line x1="48" y1="126" x2="80" y2="96" stroke="#c4b5fd" stroke-width="1.5" stroke-dasharray="4,3"/>
+              <line x1="152" y1="126" x2="120" y2="96" stroke="#c4b5fd" stroke-width="1.5" stroke-dasharray="4,3"/>
+            </svg>
           </div>
           <h3>困りごとサポート</h3>
-          <p>障がい者・生活困窮者の方の困りごとを、市役所・地域包括・ケアマネと連携して解決します。</p>
-          <ul class="service-list">
-            <li><i data-lucide="check" style="width:14px;height:14px;color:#9333ea;flex-shrink:0;"></i>障がい者・生活困窮者支援</li>
-            <li><i data-lucide="check" style="width:14px;height:14px;color:#9333ea;flex-shrink:0;"></i>行政・福祉機関との連携</li>
-            <li><i data-lucide="check" style="width:14px;height:14px;color:#9333ea;flex-shrink:0;"></i>悪質業者被害の防止支援</li>
+          <p>障がい者・生活困窮者の方を、市役所・地域包括・ケアマネと連携して支援します。</p>
+          <ul class="sv-tags">
+            <li>障がい者・困窮者支援</li>
+            <li>行政・福祉機関と連携</li>
+            <li>悪質業者からの保護</li>
           </ul>
-          <a href="#contact" class="service-link" style="color:#9333ea;">相談する <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></a>
-        </div>
+          <span class="sv-link" style="color:#7c3aed;">詳しく見る →</span>
+        </a>
 
       </div>
     </div>
   </section>
 
+  <!-- CTA バナー -->
+  <section class="cta-banner">
+    <div class="container cta-inner">
+      <div class="cta-text">
+        <h2>まず、話してみませんか。</h2>
+        <p>相談は無料です。どんな小さな悩みでもお気軽にどうぞ。</p>
+      </div>
+      <a href="#contact" class="btn-main">無料相談する <span class="arrow">→</span></a>
+    </div>
+  </section>
+
   <!-- 私たちについて -->
   <section class="about" id="about">
-    <div class="about-bg-shape"></div>
     <div class="container about-inner">
-      <div class="about-visual">
-        <div class="about-illust">
-          <svg viewBox="0 0 340 360" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- 背景カード -->
-            <rect x="20" y="40" width="300" height="280" rx="24" fill="white" filter="url(#cardShadow)"/>
-            <defs>
-              <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
-                <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="rgba(37,99,235,0.12)"/>
-              </filter>
-            </defs>
-            <!-- グラデーションヘッダー -->
-            <rect x="20" y="40" width="300" height="90" rx="24" fill="url(#cardHeaderGrad)"/>
-            <rect x="20" y="106" width="300" height="24" fill="url(#cardHeaderGrad)"/>
-            <defs>
-              <linearGradient id="cardHeaderGrad" x1="20" y1="40" x2="320" y2="130" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#2563eb"/>
-                <stop offset="1" stop-color="#0ea5e9"/>
-              </linearGradient>
-            </defs>
-            <!-- 人物アイコン（スタッフ）-->
-            <circle cx="80" cy="82" r="24" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
-            <circle cx="80" cy="76" r="10" fill="white" opacity="0.9"/>
-            <path d="M60 100c0-8 9-12 20-12s20 4 20 12" fill="white" opacity="0.6"/>
-            <!-- 肩書テキスト -->
-            <rect x="118" y="62" width="140" height="10" rx="5" fill="rgba(255,255,255,0.6)"/>
-            <rect x="118" y="80" width="100" height="8" rx="4" fill="rgba(255,255,255,0.35)"/>
-            <rect x="118" y="95" width="120" height="7" rx="3.5" fill="rgba(255,255,255,0.25)"/>
-            <!-- 資格バッジ -->
-            <rect x="40" y="150" width="260" height="38" rx="10" fill="#eff6ff"/>
-            <rect x="52" y="162" width="60" height="14" rx="5" fill="#2563eb"/>
-            <rect x="122" y="164" width="140" height="10" rx="5" fill="#93c5fd"/>
-            <rect x="40" y="198" width="260" height="38" rx="10" fill="#f0fdf4"/>
-            <rect x="52" y="210" width="60" height="14" rx="5" fill="#16a34a"/>
-            <rect x="122" y="212" width="120" height="10" rx="5" fill="#86efac"/>
-            <rect x="40" y="246" width="260" height="38" rx="10" fill="#fef3c7"/>
-            <rect x="52" y="258" width="80" height="14" rx="5" fill="#d97706"/>
-            <rect x="142" y="260" width="100" height="10" rx="5" fill="#fcd34d"/>
-            <!-- 実績バー -->
-            <rect x="40" y="296" width="260" height="8" rx="4" fill="#f1f5f9"/>
-            <rect x="40" y="296" width="200" height="8" rx="4" fill="url(#barGrad)"/>
-            <defs>
-              <linearGradient id="barGrad" gradientUnits="userSpaceOnUse" x1="40" y1="0" x2="240" y2="0">
-                <stop stop-color="#2563eb"/>
-                <stop offset="1" stop-color="#0ea5e9"/>
-              </linearGradient>
-            </defs>
-          </svg>
-          <!-- フローティングバッジ -->
-          <div class="about-float-badge badge-top">
-            <i data-lucide="star" style="width:14px;height:14px;color:#f59e0b;"></i>
-            <span>社会福祉士</span>
-          </div>
-          <div class="about-float-badge badge-bottom">
-            <i data-lucide="heart" style="width:14px;height:14px;color:#ef4444;"></i>
-            <span>丁寧に寄り添います</span>
-          </div>
+      <div class="about-illust-wrap">
+        <!-- Aboutセクションイラスト -->
+        <svg viewBox="0 0 400 460" fill="none" xmlns="http://www.w3.org/2000/svg" class="about-svg">
+          <!-- 背景 -->
+          <rect x="24" y="24" width="352" height="412" rx="28" fill="#f0fdf9"/>
+          <!-- プロフィールエリア -->
+          <rect x="24" y="24" width="352" height="120" rx="28" fill="#0d9488"/>
+          <rect x="24" y="116" width="352" height="28" rx="0" fill="#0d9488"/>
+          <!-- アバター -->
+          <circle cx="100" cy="90" r="38" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+          <circle cx="100" cy="80" r="16" fill="white" opacity="0.9"/>
+          <path d="M74,118c0-13 11-18 26-18s26 5 26 18" fill="white" opacity="0.6"/>
+          <!-- 名前・資格 -->
+          <rect x="156" y="60" width="160" height="12" rx="6" fill="rgba(255,255,255,0.7)"/>
+          <rect x="156" y="80" width="120" height="9" rx="4.5" fill="rgba(255,255,255,0.45)"/>
+          <rect x="156" y="96" width="140" height="9" rx="4.5" fill="rgba(255,255,255,0.3)"/>
+          <!-- 資格カード群 -->
+          <!-- カード1 -->
+          <rect x="44" y="164" width="312" height="52" rx="12" fill="white" stroke="#ccfbef" stroke-width="1.5"/>
+          <rect x="56" y="178" width="80" height="22" rx="6" fill="#0d9488"/>
+          <text x="66" y="193" font-family="'Noto Sans JP',sans-serif" font-size="10" fill="white" font-weight="700">社会福祉士</text>
+          <rect x="148" y="180" width="180" height="8" rx="4" fill="#a7f3d0"/>
+          <rect x="148" y="194" width="140" height="7" rx="3.5" fill="#d1fae5"/>
+          <!-- カード2 -->
+          <rect x="44" y="228" width="312" height="52" rx="12" fill="white" stroke="#d1fae5" stroke-width="1.5"/>
+          <rect x="56" y="242" width="80" height="22" rx="6" fill="#059669"/>
+          <text x="61" y="257" font-family="'Noto Sans JP',sans-serif" font-size="10" fill="white" font-weight="700">介護福祉士</text>
+          <rect x="148" y="244" width="160" height="8" rx="4" fill="#bbf7d0"/>
+          <rect x="148" y="258" width="120" height="7" rx="3.5" fill="#d1fae5"/>
+          <!-- カード3 -->
+          <rect x="44" y="292" width="312" height="52" rx="12" fill="white" stroke="#fef3c7" stroke-width="1.5"/>
+          <rect x="56" y="306" width="104" height="22" rx="6" fill="#d97706"/>
+          <text x="62" y="321" font-family="'Noto Sans JP',sans-serif" font-size="9" fill="white" font-weight="700">住環境コーディネーター</text>
+          <rect x="172" y="308" width="148" height="8" rx="4" fill="#fde68a"/>
+          <rect x="172" y="322" width="110" height="7" rx="3.5" fill="#fef3c7"/>
+          <!-- 経歴タイムライン -->
+          <line x1="68" y1="364" x2="68" y2="428" stroke="#5eead4" stroke-width="2"/>
+          <circle cx="68" cy="368" r="5" fill="#0d9488"/>
+          <circle cx="68" cy="392" r="5" fill="#0d9488"/>
+          <circle cx="68" cy="416" r="5" fill="#0d9488"/>
+          <rect x="84" y="361" width="200" height="12" rx="4" fill="#ccfbef"/>
+          <rect x="84" y="385" width="220" height="12" rx="4" fill="#ccfbef"/>
+          <rect x="84" y="409" width="190" height="12" rx="4" fill="#ccfbef"/>
+        </svg>
+        <!-- フロートバッジ -->
+        <div class="float-badge fb1">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"/></svg>
+          <span>社会福祉士</span>
+        </div>
+        <div class="float-badge fb2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="#f87171" stroke="#f87171" stroke-width="1"/></svg>
+          <span>丁寧に寄り添います</span>
         </div>
       </div>
       <div class="about-text">
-        <div class="section-header" style="text-align:left;">
-          <span class="section-eyebrow">ABOUT US</span>
-          <h2 class="section-title" style="text-align:left;">私たちについて</h2>
-        </div>
-        <p class="about-desc">「トータルサポート誠」は、長年の福祉・介護の現場経験を持つ専門家が立ち上げたサービスです。特別養護老人ホームの生活相談員、訪問介護の担当責任者、大規模デイサービスの施設長など、豊富な現場経験をもとに本当に必要なサポートをご提供します。</p>
+        <p class="sec-eyebrow">ABOUT US</p>
+        <h2 class="sec-title" style="text-align:left;">現場を知っているから、<br>本当の支援ができる。</h2>
+        <p class="about-body">「トータルサポート誠」は、長年の福祉・介護の現場で培った経験と専門知識をもとに、一人ひとりのお困りごとに真剣に向き合うサービスです。</p>
+        <p class="about-body">施設の裏側も、制度の使い方も、地域のネットワークも、現場で積み重ねてきた経験があるからこそ、本当に役立つご提案ができます。</p>
 
-        <div class="qualification-grid">
-          <div class="qual-card">
-            <div class="qual-icon" style="background:#eff6ff;">
-              <i data-lucide="badge-check" style="color:#2563eb;width:22px;height:22px;"></i>
-            </div>
-            <div>
-              <strong>社会福祉士</strong>
-              <p>法律・制度を活用した福祉の専門家</p>
-            </div>
-          </div>
-          <div class="qual-card">
-            <div class="qual-icon" style="background:#f0fdf4;">
-              <i data-lucide="heart-handshake" style="color:#16a34a;width:22px;height:22px;"></i>
-            </div>
-            <div>
-              <strong>介護福祉士</strong>
-              <p>実務から相談支援まで幅広く対応</p>
-            </div>
-          </div>
-          <div class="qual-card">
-            <div class="qual-icon" style="background:#fffbeb;">
-              <i data-lucide="home" style="color:#d97706;width:22px;height:22px;"></i>
-            </div>
-            <div>
-              <strong>福祉住環境<br>コーディネーター</strong>
-              <p>安全な住まい環境をご提案</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="career-timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
+        <div class="career-list">
+          <div class="career-item">
+            <div class="career-dot"></div>
             <div>
               <strong>特別養護老人ホーム</strong>
-              <span>生活相談員</span>
+              <span>生活相談員として勤務</span>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
+          <div class="career-item">
+            <div class="career-dot"></div>
             <div>
               <strong>訪問介護サービス</strong>
-              <span>担当責任者</span>
+              <span>担当責任者として運営</span>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
+          <div class="career-item">
+            <div class="career-dot"></div>
             <div>
               <strong>大規模デイサービス</strong>
-              <span>管理者・施設長</span>
+              <span>管理者・施設長を歴任</span>
             </div>
           </div>
         </div>
+
+        <a href="#contact" class="btn-main" style="display:inline-flex;margin-top:40px;">まずは話してみる <span class="arrow">→</span></a>
       </div>
     </div>
   </section>
@@ -444,44 +449,55 @@
   <!-- 料金 -->
   <section class="price" id="price">
     <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow">PRICING</span>
-        <h2 class="section-title">料金について</h2>
-        <p class="section-lead">老人ホーム紹介・相談は完全無料。まずはお気軽にご連絡ください。</p>
+      <div class="sec-head">
+        <p class="sec-eyebrow">PRICING</p>
+        <h2 class="sec-title">料金について</h2>
+        <p class="sec-sub">まずは相談から。費用のことは心配しないでください。</p>
       </div>
 
       <div class="price-grid">
-        <div class="price-card price-free">
-          <div class="price-card-icon" style="background:#eff6ff;">
-            <i data-lucide="home" style="color:#2563eb;width:28px;height:28px;"></i>
+        <div class="pc free-pc">
+          <div class="pc-top">
+            <div class="pc-icon" style="background:#e6fffa;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="#0d9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="9 22 9 12 15 12 15 22" stroke="#0d9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="pc-badge">完全無料</span>
           </div>
-          <div class="price-amount"><span class="price-zero">¥0</span><span class="price-unit">完全無料</span></div>
           <h3>老人ホーム紹介</h3>
-          <p>ご相談から施設入居まで費用なし。施設見学の送迎も何度でも無料です。</p>
-          <a href="#contact" class="btn btn-price">無料相談する</a>
+          <div class="pc-price"><span class="pc-yen">¥</span><span class="pc-zero">0</span></div>
+          <p>ご相談から施設入居まで、費用は一切かかりません。施設見学の送迎も無料です。</p>
+          <a href="#contact" class="btn-price-main">無料で相談する →</a>
         </div>
-        <div class="price-card price-free">
-          <div class="price-card-icon" style="background:#f0fdf4;">
-            <i data-lucide="message-circle" style="color:#16a34a;width:28px;height:28px;"></i>
+
+        <div class="pc free-pc">
+          <div class="pc-top">
+            <div class="pc-icon" style="background:#f0fdf4;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="pc-badge" style="background:#d1fae5;color:#065f46;">相談無料</span>
           </div>
-          <div class="price-amount"><span class="price-zero" style="color:#16a34a;">¥0</span><span class="price-unit">相談無料</span></div>
           <h3>介護・困りごと相談</h3>
-          <p>介護全般・生活困窮・障がい者支援に関する相談は無料で承ります。</p>
-          <a href="#contact" class="btn btn-price" style="background:#16a34a;">無料相談する</a>
+          <div class="pc-price"><span class="pc-yen">¥</span><span class="pc-zero" style="color:#059669;">0</span></div>
+          <p>介護全般・生活困窮・障がい者支援に関するご相談は無料で承ります。</p>
+          <a href="#contact" class="btn-price-main" style="background:#059669;">無料で相談する →</a>
         </div>
-        <div class="price-card">
-          <div class="price-card-icon" style="background:#fffbeb;">
-            <i data-lucide="package" style="color:#d97706;width:28px;height:28px;"></i>
+
+        <div class="pc">
+          <div class="pc-top">
+            <div class="pc-icon" style="background:#fffbeb;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="pc-badge" style="background:#fef3c7;color:#92400e;">見積無料</span>
           </div>
-          <div class="price-amount"><span class="price-from">80,000円〜</span></div>
           <h3>家財整理</h3>
-          <ul class="price-detail-list">
-            <li><span>1ルーム</span><strong>80,000円〜</strong></li>
-            <li><span>2LDK</span><strong>270,000円〜</strong></li>
-            <li><span>3LDK</span><strong>330,000円〜</strong></li>
-          </ul>
-          <p class="price-note">※お見積り無料。合い見積もり推奨。</p>
-          <a href="#contact" class="btn btn-price" style="background:#d97706;">見積を依頼する</a>
+          <div class="pc-price"><span class="pc-from">80,000<small>円〜</small></span></div>
+          <div class="price-table">
+            <div class="pt-row"><span>1ルーム</span><strong>80,000円〜</strong></div>
+            <div class="pt-row"><span>2LDK</span><strong>270,000円〜</strong></div>
+            <div class="pt-row"><span>3LDK</span><strong>330,000円〜</strong></div>
+          </div>
+          <p class="pt-note">※お見積り無料。合い見積もり推奨します。</p>
+          <a href="#contact" class="btn-price-main" style="background:#d97706;">見積を依頼する →</a>
         </div>
       </div>
     </div>
@@ -489,108 +505,78 @@
 
   <!-- お問い合わせ -->
   <section class="contact" id="contact">
-    <div class="contact-hero">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow" style="color:rgba(255,255,255,0.7);">CONTACT</span>
-          <h2 class="section-title" style="color:white;">お問い合わせ・無料相談</h2>
-          <p class="section-lead" style="color:rgba(255,255,255,0.8);">まずはお気軽にご連絡ください。秘密は厳守します。</p>
-        </div>
-      </div>
-    </div>
-    <div class="container contact-inner">
-      <div class="contact-info">
-        <h3><i data-lucide="list-checks" style="width:18px;height:18px;vertical-align:-3px;margin-right:6px;color:#2563eb;"></i>ご相談の流れ</h3>
-        <ol class="flow-list">
-          <li>
-            <div class="flow-num">01</div>
+    <div class="container contact-wrap">
+      <div class="contact-lead">
+        <p class="sec-eyebrow" style="color:#5eead4;background:rgba(94,234,212,0.15);">CONTACT</p>
+        <h2 class="sec-title" style="color:white;text-align:left;">
+          どんな小さな<br>悩みでも<br>大丈夫です。
+        </h2>
+        <p style="color:rgba(255,255,255,0.75);font-size:0.95rem;line-height:1.9;margin-bottom:40px;">無料でご相談いただけます。<br>秘密は厳守しますので、<br>安心してご連絡ください。</p>
+        <!-- ご相談の流れ -->
+        <div class="flow">
+          <div class="flow-step">
+            <div class="flow-n">1</div>
             <div>
               <strong>お問い合わせ</strong>
-              <p>フォームからご連絡ください。24時間受付。</p>
+              <p>フォームから24時間受付</p>
             </div>
-          </li>
-          <li>
-            <div class="flow-num">02</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-n">2</div>
             <div>
               <strong>無料ヒアリング</strong>
-              <p>状況やご要望を丁寧にお聞きします。</p>
+              <p>状況を丁寧にお聞きします</p>
             </div>
-          </li>
-          <li>
-            <div class="flow-num">03</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-n">3</div>
             <div>
-              <strong>ご提案・サポート開始</strong>
-              <p>最適な解決策をご提案し、サポートを始めます。</p>
+              <strong>サポート開始</strong>
+              <p>最適な解決策をご提案</p>
             </div>
-          </li>
-        </ol>
-        <div class="contact-promise">
-          <div class="promise-item">
-            <i data-lucide="lock" style="width:18px;height:18px;color:#2563eb;"></i>
-            <span>秘密厳守</span>
           </div>
-          <div class="promise-item">
-            <i data-lucide="clock" style="width:18px;height:18px;color:#2563eb;"></i>
-            <span>24h以内返信</span>
-          </div>
-          <div class="promise-item">
-            <i data-lucide="ban" style="width:18px;height:18px;color:#2563eb;"></i>
-            <span>押し売りなし</span>
-          </div>
+        </div>
+        <div class="contact-promises">
+          <span>🔒 秘密厳守</span>
+          <span>⏰ 24h以内返信</span>
+          <span>🚫 押し売りなし</span>
         </div>
       </div>
 
       <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
         <!-- ※ Formspree登録後、YOUR_FORM_IDを実際のIDに置き換えてください -->
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">お名前 <span class="required">必須</span></label>
-            <div class="input-wrap">
-              <i data-lucide="user" class="input-icon"></i>
-              <input type="text" id="name" name="name" placeholder="山田 太郎" required>
-            </div>
+        <h3 class="form-title">無料相談フォーム</h3>
+        <div class="frow">
+          <div class="fg">
+            <label>お名前 <span class="req">必須</span></label>
+            <input type="text" name="name" placeholder="山田 太郎" required>
           </div>
-          <div class="form-group">
-            <label for="phone">電話番号</label>
-            <div class="input-wrap">
-              <i data-lucide="phone" class="input-icon"></i>
-              <input type="tel" id="phone" name="phone" placeholder="090-0000-0000">
-            </div>
+          <div class="fg">
+            <label>電話番号</label>
+            <input type="tel" name="phone" placeholder="090-0000-0000">
           </div>
         </div>
-        <div class="form-group">
-          <label for="email">メールアドレス <span class="required">必須</span></label>
-          <div class="input-wrap">
-            <i data-lucide="mail" class="input-icon"></i>
-            <input type="email" id="email" name="email" placeholder="example@email.com" required>
-          </div>
+        <div class="fg">
+          <label>メールアドレス <span class="req">必須</span></label>
+          <input type="email" name="email" placeholder="example@email.com" required>
         </div>
-        <div class="form-group">
-          <label for="category">ご相談の種類</label>
-          <div class="input-wrap select-wrap">
-            <i data-lucide="layers" class="input-icon"></i>
-            <select id="category" name="category">
-              <option value="">選択してください</option>
-              <option>老人ホーム紹介</option>
-              <option>介護相談</option>
-              <option>家財整理</option>
-              <option>困りごとサポート</option>
-              <option>その他</option>
-            </select>
-          </div>
+        <div class="fg">
+          <label>ご相談の種類</label>
+          <select name="category">
+            <option value="">選択してください</option>
+            <option>老人ホーム紹介</option>
+            <option>介護相談</option>
+            <option>家財整理</option>
+            <option>困りごとサポート</option>
+            <option>その他</option>
+          </select>
         </div>
-        <div class="form-group">
-          <label for="message">ご相談内容 <span class="required">必須</span></label>
-          <textarea id="message" name="message" rows="5" placeholder="お困りの状況をお気軽にお書きください。" required></textarea>
+        <div class="fg">
+          <label>ご相談内容 <span class="req">必須</span></label>
+          <textarea name="message" rows="5" placeholder="お困りの状況をお気軽にご記入ください。" required></textarea>
         </div>
-        <button type="submit" class="btn btn-submit">
-          <i data-lucide="send" style="width:18px;height:18px;"></i>
-          送信する
-        </button>
-        <p class="form-note">
-          <i data-lucide="shield" style="width:13px;height:13px;vertical-align:-2px;"></i>
-          内容はすべて秘密厳守です。24時間以内にご返信いたします。
-        </p>
+        <button type="submit" class="btn-submit">送信する →</button>
+        <p class="fnote">内容はすべて秘密厳守。24時間以内にご返信いたします。</p>
       </form>
     </div>
   </section>
@@ -598,63 +584,49 @@
   <!-- フッター -->
   <footer class="footer">
     <div class="container footer-inner">
-      <div class="footer-brand">
+      <div class="footer-left">
         <div class="footer-logo">
-          <svg viewBox="0 0 32 32" fill="none" width="32" height="32">
-            <circle cx="16" cy="16" r="16" fill="rgba(255,255,255,0.15)"/>
-            <path d="M9 21c0-3.9 3.1-7 7-7s7 3.1 7 7" stroke="rgba(255,255,255,0.9)" stroke-width="2" stroke-linecap="round"/>
-            <circle cx="16" cy="11" r="3.5" fill="rgba(255,255,255,0.9)"/>
+          <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+            <rect width="32" height="32" rx="8" fill="#0d9488"/>
+            <circle cx="16" cy="12" r="4.5" fill="white"/>
+            <path d="M7 27c0-5 4-9 9-9s9 4 9 9" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
           </svg>
           <span>トータルサポート誠</span>
         </div>
-        <p>暮らしの困りごと解決サービス</p>
+        <p>暮らしの困りごとを丸ごとサポート</p>
       </div>
       <nav class="footer-nav">
-        <ul>
-          <li><a href="#services">サービス</a></li>
-          <li><a href="#about">私たちについて</a></li>
-          <li><a href="#price">料金</a></li>
-          <li><a href="#contact">お問い合わせ</a></li>
-        </ul>
+        <a href="#services">サービス</a>
+        <a href="#about">私たちについて</a>
+        <a href="#price">料金</a>
+        <a href="#contact">お問い合わせ</a>
       </nav>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 トータルサポート誠. All rights reserved.</p>
+    <div class="footer-copy">
+      <div class="container">&copy; 2024 トータルサポート誠. All rights reserved.</div>
     </div>
   </footer>
 
   <script>
-    // Lucideアイコン初期化
-    document.addEventListener('DOMContentLoaded', () => {
-      if (window.lucide) lucide.createIcons();
-    });
-
-    // ハンバーガーメニュー
+    // ハンバーガー
     const toggle = document.getElementById('navToggle');
     const nav = document.getElementById('nav');
     toggle.addEventListener('click', () => {
       nav.classList.toggle('open');
       toggle.classList.toggle('active');
     });
-    nav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('open');
-        toggle.classList.remove('active');
-      });
-    });
+    nav.querySelectorAll('a').forEach(l => l.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.classList.remove('active');
+    }));
 
-    // スクロールアニメーション
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.service-card, .qual-card, .price-card, .badge-item').forEach(el => {
-      el.classList.add('fade-in');
-      observer.observe(el);
+    // スクロールフェードイン
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.sv-card, .pc, .qual-card, .career-item, .strip-item').forEach(el => {
+      el.classList.add('reveal');
+      io.observe(el);
     });
   </script>
 </body>
